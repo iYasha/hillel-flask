@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <style>
+        h1 {
+            margin: 0;
+        }
+
+        #header {
+            background: grey;
+            margin: 20px;
+        }
+
+        #header h1 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .article {
+            background: grey;
+            padding: 20px;
+        }
+
+        a {
+            color: white;
+            text-align: center;
+        }
+
+        .link {
+            background: blue;
+            padding: 10px;
+        }
+
+
+        #text {
+            color: blue;
+        }
+
+        .some_text {
+            color: red;
+        }
+
+        h3 {
+            font-size: 40px;
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="index.html"><h1>My first blog</h1></a>
+    </header>
+    <div class="content">
+        <div class="article">
+            <h2>Заголовок статьи</h2>
+            <img src="https://s.zagranitsa.com/images/articles/6729/870x486/53d189dfcd54fa9ecae756ddf5a7c2ee.jpg?1530714543" alt="Тут картинка статьи">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a class="link" href="article_1.html">Прочитать всю статью...</a>
+        </div>
+    </div>
+    <h3 class="some_text" id="text">Some text</h3>
+    <input type="text" id="email" placeholder="Введите почту">
+    <button onclick="getAlert()" id="get-some-alert" class="link">Get alert</button>
+    <div id="success-message"></div>
+
+    <script>
+        // alert('Hello world!');
+        // console.log('Hello world!');
+        // let text = '1';
+        // if (text == 'hello') {
+        //     text = 'world';
+        // }
+        // else if (text == '1') {
+        //     text = '2';
+        // }
+        // let jsonFromServer = '[{"age": 20, "name": "Petya", "email": "petya@gmail.com"}, {"age": 30, "name": "Vasya", "email": "vasya@gmail.com"}]';
+        // let user = JSON.parse(jsonFromServer);
+        // console.log(user);
+            // let user = {
+            //     name: 'John',
+            //     age: 25,
+            //     email: 'john@example.com'
+            // }
+            // console.log(user.name)
+            // console.log(JSON.stringify(user))
+        function getAlert() {
+            let email = document.getElementById('email').value;
+            let successMessage = document.getElementById('success-message');
+
+            let requestForServer = {
+                email: email
+            }
+            console.log(JSON.stringify(requestForServer));
+            if (email == 'test@gmail.com') {
+                successMessage.innerHTML = '<a href="index.html" class="link">Перейти на главную</a><p>Вы успешно вошли в аккаунт</p>';
+            }
+            else {
+                successMessage.innerHTML = '<p>Неправильная почта</p>';
+            }
+        }
+    </script>
+</body>
+</html>
+

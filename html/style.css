@@ -1,0 +1,50 @@
+
+h1 {
+    margin: 0;
+}
+
+#header {
+    background: grey;
+    margin: 20px;
+}
+
+#header h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.content {
+    margin: 20px;
+}
+
+.article {
+    background: grey;
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-align: center;
+}
+
+.link {
+    background: blue;
+    padding: 10px;
+}
+
+
+#text {
+    color: blue;
+}
+
+.some_text {
+    color: red;
+}
+
+h3 {
+    font-size: 40px;
+    text-align: center;
+    color: green;
+}
+
